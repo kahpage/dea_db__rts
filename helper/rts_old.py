@@ -1,6 +1,7 @@
 # Notes:
 # https://reitaisai.com/tw3/
 # For all media: https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD
+# TODO: urls from thwikicc or https://web.archive.org/web/20050830234407/http://www.reitaisai.com/link.html
 
 from db_structs import Medium, Circle, Event, EventGroup, Source, ReliabilityTypes, OriginTypes, Location
 from pathlib import Path
@@ -53,7 +54,6 @@ if __name__ == '__main__':
         events_raw.append(event_raw)
 
     if True: # ==== rts2 ====
-        # TODO: urls from thwikicc or https://web.archive.org/web/20050830234407/http://www.reitaisai.com/link.html
         name = "rts2"
         print(f"Processing {name} ...")
 

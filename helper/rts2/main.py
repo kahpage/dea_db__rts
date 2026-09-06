@@ -70,12 +70,14 @@ SUBSTITUTIONS = {
     '~': '〜',
     'ー': '-',
     '－': '-',
+    '−': '-',
     '　': ' ',
     '-': '-',
     '\\u3000': ' ',
     '！': '!',
     '．': '.',
     '･': '.',
+    '・': '.',
     '·': '.',
 }
 SUBSTITUTIONS_ALL = {}
@@ -93,6 +95,13 @@ def normalize_for_match(text: str) -> str:
 
 def is_equal_with_subst(str1: str, str2: str) -> bool:
     return normalize_for_match(str1) == normalize_for_match(str2)
+
+def is_equal_or_group_member(str1: str, str2: str) -> bool:
+    target = normalize_for_match(str1)
+    if target == normalize_for_match(str2):
+        return True
+    group_members = re.split(r"[&と]", str2)
+    return any(target == normalize_for_match(member) for member in group_members)
 
 def ensure_unicity(texts: list[str]) -> list[str]:
     """Ensure that the list of texts contains unique entries, ignoring case and substitutions."""
@@ -114,7 +123,7 @@ def main():
     
     # Official source
     # Parse the HTML content to extract circle information
-    soup = retrieve_soup_fetch_if_needed("https://web.archive.org/web/20190329131601/https://jiyugiga.sakura.ne.jp/reitaisai_list.html", "raw_official.html", encoding="cp932")
+    soup = retrieve_soup_fetch_if_needed("https://web.archive.org/web/20050820010809id_/http://www.reitaisai.com/clist.html", "raw_official.html", encoding="cp932")
 
     circles_info = []
     circles_info_used_indices = []
@@ -123,22 +132,23 @@ def main():
 
     for row in rows[1:]:
         cols = row.find_all('td') #TODO: rows of different length
-        
-        circle_name = cols[0].text.strip() if len(cols) > 0 else None
-        circle_penname = cols[1].text.strip() if len(cols) > 1 else None
-        booth_name = cols[2].text.strip() if len(cols) > 2 else None
-        link = cols[3].text.strip() if len(cols) > 3 else None
-        comments = cols[4].text.strip() if len(cols) > 4 else None
+        if len(cols) < 3:
+            continue
+        position_block = cols[0].get_text(strip=True)
+        position_number = cols[1].get_text(strip=True)
+        position = f"{position_block}{position_number}"
+        circle_name = cols[2].get_text(strip=True)
+        pen_name = cols[3].get_text(strip=True) if len(cols) > 3 else ""
 
-        if booth_name and "みょふ～会" in booth_name:
-            print(f"Found special case circle: {circle_name} booth={booth_name}")
+        # if booth_name and "みょふ～会" in booth_name:
+        #     print(f"Found special case circle: {circle_name} booth={booth_name}")
         
         circle_info = {
             "circle_name": circle_name,
-            "circle_penname": circle_penname,
-            "booth_name": booth_name,
-            "links": [part.strip() for part in link.split("・") if part.strip()] if is_to_add(link) else [],
-            "comments": [comments] if comments else [],
+            "circle_penname": pen_name,
+            # "booth_name": booth_name,
+            "links": [],
+            # "comments": [comments] if comments else [],
         }
 
         circle_info["combined"] = f"{circle_info}"
@@ -149,9 +159,9 @@ def main():
 
     # Secondary source
     # Parse the HTML content to extract circle information
-        soup = retrieve_soup_fetch_if_needed("https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E7%A5%AD/%E7%AC%AC1%E5%B1%8A%E6%91%8A%E4%BD%8D",
+    soup = retrieve_soup_fetch_if_needed("https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD/%E7%AC%AC2%E5%B1%8A%E6%91%8A%E4%BD%8D",
             "raw_secondary.html",
-            "https://web.archive.org/web/20230306004149/https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD/%E7%AC%AC1%E5%B1%8A%E6%91%8A%E4%BD%8D")
+            "https://web.archive.org/web/2/https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD/%E7%AC%AC2%E5%B1%8A%E6%91%8A%E4%BD%8D")
 
     table = soup.find_all('table')[-1]
     rows = table.find_all('tr')
@@ -172,98 +182,85 @@ def main():
         circle_info = None
         circle_additional_alias = None
         for index, info in enumerate(circles_info):
-            if (
-                is_equal_with_subst(circle_name, info["circle_name"])
-                or (
-                    info["booth_name"]
-                    and is_equal_with_subst(circle_name, info["booth_name"])
-                )
-            ):
+            if is_equal_or_group_member(circle_name, info["circle_name"]):
                 circle_info = info
                 circles_info_used_indices.append(index)
                 if circle_name not in info["combined"]:
                     circle_additional_alias = circle_name
                 break
             
-        if circle_info is None:
-            # Special cases
-            if circle_name == "DRAGIN":
-                for index, info in enumerate(circles_info):
-                    if is_in_with_subst("ＤＯＲＡＧＩＮ'", info["combined"]):
-                        circle_info = info
-                        circles_info_used_indices.append(index)
-                        circle_additional_alias = circle_name
-                        break
-            elif circle_name == "twirl-look":
-                for index, info in enumerate(circles_info):
-                    if is_in_with_subst("twirl-lock", info["combined"]):
-                        circle_info = info
-                        circles_info_used_indices.append(index)
-                        circle_additional_alias = circle_name
-                        break
-            elif circle_name == 'SeaFox':
-                for index, info in enumerate(circles_info):
-                    if is_in_with_subst("Sea Fox", info["combined"]):
-                        circle_info = info
-                        circles_info_used_indices.append(index)
-                        circle_additional_alias = circle_name
-                        break
-            elif circle_name == 'P-MANIA':
-                for index, info in enumerate(circles_info):
-                    if is_in_with_subst("丁稚↑", info["combined"]):
-                        circle_info = info
-                        circles_info_used_indices.append(index)
-                        circle_additional_alias = circle_name
-                        break
-            elif circle_name == 'FelisOvum':
-                for index, info in enumerate(circles_info):
-                    if is_in_with_subst("Felis Ovum", info["combined"]):
-                        circle_info = info
-                        circles_info_used_indices.append(index)
-                        circle_additional_alias = circle_name
-                        break
-            elif circle_name == 'mistbell':
-                for index, info in enumerate(circles_info):
-                    if is_in_with_subst("mist bell", info["combined"]):
-                        circle_info = info
-                        circles_info_used_indices.append(index)
-                        circle_additional_alias = circle_name
-                        break
-            elif circle_name == 'FragileOnline':
-                for index, info in enumerate(circles_info):
-                    if info["circle_name"] == "fragilonline":
-                        circle_info = info
-                        circles_info_used_indices.append(index)
-                        circle_additional_alias = circle_name
-                        break
-            elif circle_name == 'Twinkle Snows':
-                # Was not in primary source
-                circle_info = {
-                    "circle_name": "Twinkle Snows",
-                    "circle_penname": "",
-                    "booth_name": "",
-                    "links": [],
-                    "comments": [],
-                }
-                circle_additional_alias = "Ｔｗｉｎｋｌｅ　Ｓｎｏｗｓ"
-            elif circle_name == 'まりおねっと装甲猟兵':
-                # Was not in primary source
-                circle_info = {
-                    "circle_name": "まりおねっと装甲猟兵",
-                    "circle_penname": "",
-                    "booth_name": "",
-                    "links": [],
-                    "comments": [],
-                }
-            elif circle_name == '月黄泉の街':
-                # Was not in primary source
-                circle_info = {
-                    "circle_name": "月黄泉の街",
-                    "circle_penname": "",
-                    "booth_name": "",
-                    "links": [],
-                    "comments": [],
-                }
+        # if circle_info is None:
+        #     # Special cases
+        #     if circle_name == "DRAGIN":
+        #         for index, info in enumerate(circles_info):
+        #             if is_in_with_subst("ＤＯＲＡＧＩＮ'", info["combined"]):
+        #                 circle_info = info
+        #                 circles_info_used_indices.append(index)
+        #                 circle_additional_alias = circle_name
+        #                 break
+        #     elif circle_name == "twirl-look":
+        #         for index, info in enumerate(circles_info):
+        #             if is_in_with_subst("twirl-lock", info["combined"]):
+        #                 circle_info = info
+        #                 circles_info_used_indices.append(index)
+        #                 circle_additional_alias = circle_name
+        #                 break
+        #     elif circle_name == 'SeaFox':
+        #         for index, info in enumerate(circles_info):
+        #             if is_in_with_subst("Sea Fox", info["combined"]):
+        #                 circle_info = info
+        #                 circles_info_used_indices.append(index)
+        #                 circle_additional_alias = circle_name
+        #                 break
+        #     elif circle_name == 'P-MANIA':
+        #         for index, info in enumerate(circles_info):
+        #             if is_in_with_subst("丁稚↑", info["combined"]):
+        #                 circle_info = info
+        #                 circles_info_used_indices.append(index)
+        #                 circle_additional_alias = circle_name
+        #                 break
+        #     elif circle_name == 'FelisOvum':
+        #         for index, info in enumerate(circles_info):
+        #             if is_in_with_subst("Felis Ovum", info["combined"]):
+        #                 circle_info = info
+        #                 circles_info_used_indices.append(index)
+        #                 circle_additional_alias = circle_name
+        #                 break
+        #     elif circle_name == 'mistbell':
+        #         for index, info in enumerate(circles_info):
+        #             if is_in_with_subst("mist bell", info["combined"]):
+        #                 circle_info = info
+        #                 circles_info_used_indices.append(index)
+        #                 circle_additional_alias = circle_name
+        #                 break
+        #     elif circle_name == 'Twinkle Snows':
+        #         # Was not in primary source
+        #         circle_info = {
+        #             "circle_name": "Twinkle Snows",
+        #             "circle_penname": "",
+        #             "booth_name": "",
+        #             "links": [],
+        #             "comments": [],
+        #         }
+        #         circle_additional_alias = "Ｔｗｉｎｋｌｅ　Ｓｎｏｗｓ"
+        #     elif circle_name == 'まりおねっと装甲猟兵':
+        #         # Was not in primary source
+        #         circle_info = {
+        #             "circle_name": "まりおねっと装甲猟兵",
+        #             "circle_penname": "",
+        #             "booth_name": "",
+        #             "links": [],
+        #             "comments": [],
+        #         }
+        #     elif circle_name == '月黄泉の街':
+        #         # Was not in primary source
+        #         circle_info = {
+        #             "circle_name": "月黄泉の街",
+        #             "circle_penname": "",
+        #             "booth_name": "",
+        #             "links": [],
+        #             "comments": [],
+        #         }
 
         if circle_info is None: # No match found
             print(f"Circle from secondary source not found in primary: {circle_name}")
@@ -272,18 +269,18 @@ def main():
         circle_links = circle_info["links"]
         if is_to_add(links):
             circle_links.extend(links)
-        booth_name = circle_info["booth_name"]
+        # booth_name = circle_info["booth_name"]
         aliases = [circle_name]
-        if is_to_add(booth_name):
-            aliases.append(booth_name)
+        # if is_to_add(booth_name):
+        #     aliases.append(booth_name)
         circle_penname = circle_info["circle_penname"]
             
-        comments = circle_info["comments"]
+        # comments = circle_info["comments"]
         circle = Circle(
             position=position if is_to_add(position) else None,
-            comments=comments if is_to_add(comments) else None,
+            # comments=comments if is_to_add(comments) else None,
             links=ensure_unicity(circle_links) if is_to_add(circle_links) else None,
-            aliases=aliases,
+            aliases=ensure_unicity(aliases),
             pen_names=[circle_penname] if is_to_add(circle_penname) else None,
         )
         circles.append(circle)
@@ -296,14 +293,14 @@ def main():
         info = circles_info[i]
         print(f"Unused circle: {info['combined']}")
     # This revealed some not found circles, let's add them too
-    circles.append(Circle(
-            position=None,
-            aliases=["マリオネット装甲猟兵"],
-    ))
-    circles.append(Circle(
-            position=None,
-            aliases=["ＮＥＫＯＧＯＹＡ"],
-    ))
+    # circles.append(Circle(
+    #         position=None,
+    #         aliases=["マリオネット装甲猟兵"],
+    # ))
+    # circles.append(Circle(
+    #         position=None,
+    #         aliases=["ＮＥＫＯＧＯＹＡ"],
+    # ))
 
 
 
