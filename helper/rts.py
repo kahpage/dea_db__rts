@@ -1378,9 +1378,25 @@ if __name__ == "__main__":
         print(f"Processing {event_name} ...")
 
         media_ = [
-            Medium("19_rts19.png",
-                   [Source(main_page_with_history, (ReliabilityTypes.Reliable, OriginTypes.Official))]),
-            Medium("19_8908737d0e88543529d40271143c5420-3.png", [Source("https://web.archive.org/web/20260512005258/https://reitaisai.com/rts19/", (RT.Reliable, OT.Official))]),
+            Medium(
+                "19_rts19.png",
+                [
+                    Source(
+                        main_page_with_history,
+                        (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "19_8908737d0e88543529d40271143c5420-3.png",
+                [
+                    Source(
+                        "https://web.archive.org/web/20260512005258/https://reitaisai.com/rts19/",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            # Medium("19_Circle_bosyu.gif", [Source("https://web.archive.org/web/20220325072223/https://reitaisai.com/rts19/accepted-circle-list/", (RT.Reliable, OT.Official))]),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
         ]
         locations = [
@@ -1406,18 +1422,359 @@ if __name__ == "__main__":
                 f"Hakurei Jinja Reitaisai {i}",
                 f"Reitaisai {i}",
                 f"RTS{i}",
-                "第十九回 博麗神社例大祭"],
+                "第十九回 博麗神社例大祭",
+            ],
             dates="2022.05.08",
             circles=[],
             media=media_,
             sources=[
-                Source("Date: https://reitaisai.com/", (ReliabilityTypes.Reliable, OriginTypes.Official)),
-                Source("Participating circles: https://reitaisai.com/rts19/accepted-circle-list/", (ReliabilityTypes.Reliable, OriginTypes.Official)),
+                Source(
+                    "Date: https://web.archive.org/web/20260512005258/https://reitaisai.com/rts19/",
+                    (ReliabilityTypes.Reliable, OriginTypes.Official),
+                ),
+                Source(
+                    "Participating circles: https://reitaisai.com/rts19/accepted-circle-list/",
+                    (ReliabilityTypes.Reliable, OriginTypes.Official),
+                ),
             ],
             locations=locations,
             description=None,
             # comments=None,
             last_edited="2026.09.06",
+        )
+
+        # Retrieve circles
+        event.circles = retrieve_circles(event_name)
+        events.append(event)
+
+    i = 20  # ==== rts20 ====
+    if i not in disabled_events:
+        event_name = f"rts{i}"
+        print(f"Processing {event_name} ...")
+
+        media_ = [
+            Medium(
+                "20_rts20.png",
+                [
+                    Source(
+                        main_page_with_history,
+                        (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "20_ab2b25419a9c827132521c8dc89ca9e3-1.png",
+                [
+                    Source(
+                        "https://web.archive.org/web/20260512005327/https://reitaisai.com/rts20/",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            # Medium("", [Source("", (RT.Reliable, OT.Official))]),
+        ]
+        locations = [
+            Location(
+                coordinates=(35.6284445, 139.7926734),
+                address="3 Chome-11-1 Ariake, Koto City, Tokyo 135-0063, Japan",
+                description="東京ビッグサイト 東ホール",
+                sources=[
+                    Source(
+                        "https://web.archive.org/web/20260512005327/https://reitaisai.com/rts20/",
+                        (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    )
+                ],
+                # comments=None,
+                imageUrl="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmniRNV84lzB1SNXuy60c0lznxgbqmNtYyJ8rkHQXk9u4qwSBeDafMEeWY7SaHOPcgw9m9BObYv4SvxJATFOtwEErABiE-oZjeBkl96ni8hTFClnpIJNnLLpRCBg6Ue9K__BWAAVQ=s0?imgmax=0",
+                url="https://maps.app.goo.gl/6EYu64eY7PRhWRxu7",
+            ),
+        ]
+        event = Event(
+            aliases=[
+                f"例大祭{i}",
+                f"博麗神社例大祭{i}",
+                f"Hakurei Jinja Reitaisai {i}",
+                f"Reitaisai {i}",
+                f"RTS{i}",
+                "第二十回 博麗神社例大祭",
+            ],
+            dates="2023.05.07",
+            circles=[],
+            media=media_,
+            sources=[
+                Source(
+                    "Date: https://web.archive.org/web/20260512005327/https://reitaisai.com/rts20/",
+                    (ReliabilityTypes.Reliable, OriginTypes.Official),
+                ),
+                Source(
+                    "Participating circles: https://web.archive.org/web/20260417084948/https://reitaisai.com/rts20/place-assign/",
+                    (ReliabilityTypes.Reliable, OriginTypes.Official),
+                ),
+            ],
+            locations=locations,
+            description=None,
+            # comments=None,
+            last_edited="2026.09.07",
+        )
+
+        # Retrieve circles
+        event.circles = retrieve_circles(event_name)
+        events.append(event)
+
+    i = 21  # ==== rts21 ====
+    if i not in disabled_events:
+        event_name = f"rts{i}"
+        print(f"Processing {event_name} ...")
+
+        media_ = [
+            Medium(
+                "21_rts21.png",
+                [
+                    Source(
+                        main_page_with_history,
+                        (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "21_RTS21_WebTopImg_Catalog_Pc-4.png",
+                [
+                    Source(
+                        "https://web.archive.org/web/20260623174902/https://reitaisai.com/rts21/",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "21_e032046d2bfff3731ad96091eeba60f2.png",
+                [
+                    Source(
+                        "https://web.archive.org/web/20260623174902/https://reitaisai.com/rts21/",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            # Medium("", [Source("", (RT.Reliable, OT.Official))]),
+            # Medium("", [Source("", (RT.Reliable, OT.Official))]),
+        ]
+        locations = [
+            Location(
+                coordinates=(35.6284445, 139.7926734),
+                address="3 Chome-11-1 Ariake, Koto City, Tokyo 135-0063, Japan",
+                description="東京ビッグサイト東4・5・6ホール",
+                sources=[
+                    Source(
+                        "https://web.archive.org/web/20260623174902/https://reitaisai.com/rts21/",
+                        (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    )
+                ],
+                # comments=None,
+                imageUrl="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmniRNV84lzB1SNXuy60c0lznxgbqmNtYyJ8rkHQXk9u4qwSBeDafMEeWY7SaHOPcgw9m9BObYv4SvxJATFOtwEErABiE-oZjeBkl96ni8hTFClnpIJNnLLpRCBg6Ue9K__BWAAVQ=s0?imgmax=0",
+                url="https://maps.app.goo.gl/6EYu64eY7PRhWRxu7",
+            ),
+        ]
+        event = Event(
+            aliases=[
+                f"例大祭{i}",
+                f"博麗神社例大祭{i}",
+                f"Hakurei Jinja Reitaisai {i}",
+                f"Reitaisai {i}",
+                f"RTS{i}",
+                "第二十一回 博麗神社例大祭",
+            ],
+            dates="2024.05.03",
+            circles=[],
+            media=media_,
+            sources=[
+                Source(
+                    "Date: https://web.archive.org/web/20260623174902/https://reitaisai.com/rts21/",
+                    (ReliabilityTypes.Reliable, OriginTypes.Official),
+                ),
+                Source(
+                    "Participating circles: https://web.archive.org/web/20260512005320/https://reitaisai.com/rts21/circle-place-assign/",
+                    (ReliabilityTypes.Reliable, OriginTypes.Official),
+                ),
+            ],
+            locations=locations,
+            description=None,
+            # comments=None,
+            last_edited="2026.09.07",
+        )
+
+        # Retrieve circles
+        event.circles = retrieve_circles(event_name)
+        events.append(event)
+
+    i = 22  # ==== rts22 ====
+    if i not in disabled_events:
+        event_name = f"rts{i}"
+        print(f"Processing {event_name} ...")
+
+        media_ = [
+            Medium(
+                "22_rts22.png",
+                [
+                    Source(
+                        main_page_with_history,
+                        (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "22_RTS22_firstView_pc_catalog.png",
+                [
+                    Source(
+                        "https://web.archive.org/web/20260710081327/https://reitaisai.com/rts22/",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "https://web.archive.org/web/20250608183927/https://reitaisai.com/rts22/wp-content/uploads/sites/45/2025/04/RTS22_almighty_1.2.1.pdf",
+                [
+                    Source(
+                        "https://web.archive.org/web/20260512005321/https://reitaisai.com/rts22/before-circle-docs/",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "https://web.archive.org/web/20250608183927/https://reitaisai.com/rts22/wp-content/uploads/sites/45/2025/04/RTS22_DigiAnaAlmighty_1.1.0.pdf",
+                [
+                    Source(
+                        "https://web.archive.org/web/20260512005321/https://reitaisai.com/rts22/before-circle-docs/",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "https://web.archive.org/web/20260215210545/https://reitaisai.com/rts22/wp-content/uploads/sites/45/2025/04/RTS22_map-for-circle_v3.pdf",
+                [
+                    Source(
+                        "https://web.archive.org/web/20260512005321/https://reitaisai.com/rts22/before-circle-docs/",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            # Medium("", [Source("https://web.archive.org/web/20260512005321/https://reitaisai.com/rts22/before-circle-docs/", (RT.Reliable, OT.Official))]),
+            # Medium("", [Source("https://web.archive.org/web/20260512005321/https://reitaisai.com/rts22/before-circle-docs/", (RT.Reliable, OT.Official))]),
+            # Medium("", [Source("", (RT.Reliable, OT.Official))]),
+        ]
+        locations = [
+            Location(
+                coordinates=(35.6284445, 139.7926734),
+                address="3 Chome-11-1 Ariake, Koto City, Tokyo 135-0063, Japan",
+                description="東京ビッグサイト東3・4・5・6ホール",
+                sources=[
+                    Source(
+                        "https://web.archive.org/web/20260710081327/https://reitaisai.com/rts22/",
+                        (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    )
+                ],
+                # comments=None,
+                imageUrl="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmniRNV84lzB1SNXuy60c0lznxgbqmNtYyJ8rkHQXk9u4qwSBeDafMEeWY7SaHOPcgw9m9BObYv4SvxJATFOtwEErABiE-oZjeBkl96ni8hTFClnpIJNnLLpRCBg6Ue9K__BWAAVQ=s0?imgmax=0",
+                url="https://maps.app.goo.gl/6EYu64eY7PRhWRxu7",
+            ),
+        ]
+        event = Event(
+            aliases=[
+                f"例大祭{i}",
+                f"博麗神社例大祭{i}",
+                f"Hakurei Jinja Reitaisai {i}",
+                f"Reitaisai {i}",
+                f"RTS{i}",
+                "第二十二回 博麗神社例大祭",
+            ],
+            dates="2025.05.05",
+            circles=[],
+            media=media_,
+            sources=[
+                Source(
+                    "Date: https://web.archive.org/web/20260710081327/https://reitaisai.com/rts22/",
+                    (RT.Reliable, OT.Official),
+                ),
+                Source(
+                    "Participating circles (1): https://web.archive.org/web/20260417090718id_/https://reitaisai.com/rts22/accepted-circle-list/",
+                    (RT.Reliable, OT.Official),
+                ),
+                Source(
+                    "Participating circles (2): https://web.archive.org/web/20260511032221id_/https://reitaisai.com/rts22/accepted-additional-circles-list/",
+                    (RT.Reliable, OT.Official),
+                ),
+            ],
+            locations=locations,
+            description=None,
+            comments="A circle.ms entry seem to have existed but I could not find it: https://reitaisai.com/rts22/circle-ms/",
+            last_edited="2026.09.07",
+        )
+
+        # Retrieve circles
+        event.circles = retrieve_circles(event_name)
+        events.append(event)
+
+    i = 23  # ==== rts23 ====
+    if i not in disabled_events:
+        event_name = f"rts{i}"
+        print(f"Processing {event_name} ...")
+
+        media_ = [
+            Medium(
+                "23_a60addd0861b0933f9dafa82daecf126.png",
+                [Source("main_page_with_history", (RT.Reliable, OT.Official))],
+            ),
+            Medium(
+                "23_Img_pc.png",
+                [
+                    Source(
+                        "https://web.archive.org/web/20260812171832/https://reitaisai.com/rts23/",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            # Medium("", [Source("", (RT.Reliable, OT.Official))]),
+        ]
+        locations = [
+            Location(
+                coordinates=(35.6284445, 139.7926734),
+                address="3 Chome-11-1 Ariake, Koto City, Tokyo 135-0063, Japan",
+                description="東京ビッグサイト東ホール",
+                sources=[
+                    Source(
+                        "https://web.archive.org/web/20260812171832/https://reitaisai.com/rts23/",
+                        (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    )
+                ],
+                # comments=None,
+                imageUrl="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmniRNV84lzB1SNXuy60c0lznxgbqmNtYyJ8rkHQXk9u4qwSBeDafMEeWY7SaHOPcgw9m9BObYv4SvxJATFOtwEErABiE-oZjeBkl96ni8hTFClnpIJNnLLpRCBg6Ue9K__BWAAVQ=s0?imgmax=0",
+                url="https://maps.app.goo.gl/6EYu64eY7PRhWRxu7",
+            ),
+        ]
+        event = Event(
+            aliases=[
+                f"例大祭{i}",
+                f"博麗神社例大祭{i}",
+                f"Hakurei Jinja Reitaisai {i}",
+                f"Reitaisai {i}",
+                f"RTS{i}",
+                "第二十三回 博麗神社例大祭",
+            ],
+            dates="2026.05.04",
+            circles=[],
+            media=media_,
+            sources=[
+                Source(
+                    "Date: https://web.archive.org/web/20260812171832/https://reitaisai.com/rts23/",
+                    (RT.Reliable, OT.Official),
+                ),
+                Source(
+                    "Participating circles: https://web.archive.org/web/20260502053653/https://reitaisai.com/rts23/circle-place-assign/",
+                    (RT.Reliable, OT.Official),
+                ),
+            ],
+            locations=locations,
+            description=None,
+            # comments=None,
+            last_edited="2026.09.07",
         )
 
         # Retrieve circles
@@ -1469,163 +1826,7 @@ if __name__ == "__main__":
     #         locations=locations,
     #         description=None,
     #         # comments=None,
-    #         last_edited="2026.09.06",
-    #     )
-
-    #     # Retrieve circles
-    #     # event.circles = retrieve_circles(event_name)
-    #     events.append(event)
-
-    # i =   # ==== rts ====
-    # if i not in disabled_events:
-    #     event_name = f"rts{i}"
-    #     print(f"Processing {event_name} ...")
-
-    #     media_ = [
-    #         # Medium("", [Source("", (RT.Reliable, OT.Official))]),
-    #         # Medium("", [Source("", (RT.Reliable, OT.Official))]),
-    #         # Medium("", [Source("", (RT.Reliable, OT.Official))]),
-    #     ]
-    #     locations = [
-    #         # Location(
-    #         #     coordinates=(35.5587817, 139.7240667),
-    #         #     address="1-chōme-20-20 Minamikamata, Ota City, Tokyo 144-0035, Japan",
-    #         #     description="大田区産業プラザPiO",
-    #         #     sources=[
-    #         #         Source(
-    #         #             "",
-    #         #             (ReliabilityTypes.Reliable, OriginTypes.Official),
-    #         #         )
-    #         #     ],
-    #         #     # comments=None,
-    #         #     imageUrl="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlM30iutkku0DTSgB6rPTEw19CjIMC8icvKceGIJ2eTMqA35cGcD96nMco5OldsWWRdWwEFDXLxoAAXei1t3Zf7GGFGgyWvsUa8bPofUHCGvcxTY3TlJhQNxQFHYYg4fqCFHSE=w408-h544-k-no",
-    #         #     url="https://maps.app.goo.gl/7ebCWMtzDWoLJQms5",
-    #         # ),
-    #     ]
-    #     event = Event(
-    #         aliases=[
-    #             f"例大祭{i}",
-    #             f"博麗神社例大祭{i}",
-    #             f"Hakurei Jinja Reitaisai {i}",
-    #             f"Reitaisai {i}",
-    #             f"RTS{i}",
-    #             @@
-    #         ],
-    #         dates="",
-    #         circles=[],
-    #         media=media_,
-    #         sources=[
-    #             # Source(f"Date: {}", (RT.Reliable, OT.Official)),
-    #             # Source("Participating circles: ", (RT.Reliable, OT.Official)),
-    #         ],
-    #         locations=locations,
-    #         description=None,
-    #         # comments=None,
-    #         last_edited="2026.09.06",
-    #     )
-
-    #     # Retrieve circles
-    #     # event.circles = retrieve_circles(event_name)
-    #     events.append(event)
-
-    # i =   # ==== rts ====
-    # if i not in disabled_events:
-    #     event_name = f"rts{i}"
-    #     print(f"Processing {event_name} ...")
-
-    #     media_ = [
-    #         # Medium("", [Source("", (RT.Reliable, OT.Official))]),
-    #         # Medium("", [Source("", (RT.Reliable, OT.Official))]),
-    #         # Medium("", [Source("", (RT.Reliable, OT.Official))]),
-    #     ]
-    #     locations = [
-    #         # Location(
-    #         #     coordinates=(35.5587817, 139.7240667),
-    #         #     address="1-chōme-20-20 Minamikamata, Ota City, Tokyo 144-0035, Japan",
-    #         #     description="大田区産業プラザPiO",
-    #         #     sources=[
-    #         #         Source(
-    #         #             "",
-    #         #             (ReliabilityTypes.Reliable, OriginTypes.Official),
-    #         #         )
-    #         #     ],
-    #         #     # comments=None,
-    #         #     imageUrl="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlM30iutkku0DTSgB6rPTEw19CjIMC8icvKceGIJ2eTMqA35cGcD96nMco5OldsWWRdWwEFDXLxoAAXei1t3Zf7GGFGgyWvsUa8bPofUHCGvcxTY3TlJhQNxQFHYYg4fqCFHSE=w408-h544-k-no",
-    #         #     url="https://maps.app.goo.gl/7ebCWMtzDWoLJQms5",
-    #         # ),
-    #     ]
-    #     event = Event(
-    #         aliases=[
-    #             f"例大祭{i}",
-    #             f"博麗神社例大祭{i}",
-    #             f"Hakurei Jinja Reitaisai {i}",
-    #             f"Reitaisai {i}",
-    #             f"RTS{i}",
-    #             @@
-    #         ],
-    #         dates="",
-    #         circles=[],
-    #         media=media_,
-    #         sources=[
-    #             # Source(f"Date: {}", (RT.Reliable, OT.Official)),
-    #             # Source("Participating circles: ", (RT.Reliable, OT.Official)),
-    #         ],
-    #         locations=locations,
-    #         description=None,
-    #         # comments=None,
-    #         last_edited="2026.09.06",
-    #     )
-
-    #     # Retrieve circles
-    #     # event.circles = retrieve_circles(event_name)
-    #     events.append(event)
-
-    # i =   # ==== rts ====
-    # if i not in disabled_events:
-    #     event_name = f"rts{i}"
-    #     print(f"Processing {event_name} ...")
-
-    #     media_ = [
-    #         # Medium("", [Source("", (RT.Reliable, OT.Official))]),
-    #         # Medium("", [Source("", (RT.Reliable, OT.Official))]),
-    #         # Medium("", [Source("", (RT.Reliable, OT.Official))]),
-    #     ]
-    #     locations = [
-    #         # Location(
-    #         #     coordinates=(35.5587817, 139.7240667),
-    #         #     address="1-chōme-20-20 Minamikamata, Ota City, Tokyo 144-0035, Japan",
-    #         #     description="大田区産業プラザPiO",
-    #         #     sources=[
-    #         #         Source(
-    #         #             "",
-    #         #             (ReliabilityTypes.Reliable, OriginTypes.Official),
-    #         #         )
-    #         #     ],
-    #         #     # comments=None,
-    #         #     imageUrl="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlM30iutkku0DTSgB6rPTEw19CjIMC8icvKceGIJ2eTMqA35cGcD96nMco5OldsWWRdWwEFDXLxoAAXei1t3Zf7GGFGgyWvsUa8bPofUHCGvcxTY3TlJhQNxQFHYYg4fqCFHSE=w408-h544-k-no",
-    #         #     url="https://maps.app.goo.gl/7ebCWMtzDWoLJQms5",
-    #         # ),
-    #     ]
-    #     event = Event(
-    #         aliases=[
-    #             f"例大祭{i}",
-    #             f"博麗神社例大祭{i}",
-    #             f"Hakurei Jinja Reitaisai {i}",
-    #             f"Reitaisai {i}",
-    #             f"RTS{i}",
-    #             @@
-    #         ],
-    #         dates="",
-    #         circles=[],
-    #         media=media_,
-    #         sources=[
-    #             # Source(f"Date: {}", (RT.Reliable, OT.Official)),
-    #             # Source("Participating circles: ", (RT.Reliable, OT.Official)),
-    #         ],
-    #         locations=locations,
-    #         description=None,
-    #         # comments=None,
-    #         last_edited="2026.09.06",
+    #         last_edited="2026.09.07",
     #     )
 
     #     # Retrieve circles
@@ -1656,12 +1857,13 @@ if __name__ == "__main__":
             #     (ReliabilityTypes.Reliable, OriginTypes.Official),
             # ),
         ],
-        comments="Most sources were taken from https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD#15. As on thwiki.cc, several circle count discrepancies exist compared to official sources (not sourced here but can be seen on thwiki.cc).",
+        comments="Many sources from https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD#15. As on thwiki.cc, several circle count discrepancies exist compared to official sources (not sourced here but can be seen on thwiki.cc).",
         description=None,
         last_edited="2026.09.02",
     )
 
     raise ValueError("Fix Date sources")
+    raise ValueError("Location source, avoid External")
     print(f"Saving {Path(__file__).stem} database...")
     event_group.save(PATH_EVENT_GROUP, indent=None)
     print("Done")
