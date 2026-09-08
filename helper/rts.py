@@ -85,17 +85,53 @@ if __name__ == "__main__":
                     )
                 ],
             ),
+            Medium(
+                "01_例大祭第一届插画1.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (ReliabilityTypes.Likely, OriginTypes.External),
+                    )
+                ],
+            ),
+            Medium(
+                "01_例大祭第一届插画2.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (ReliabilityTypes.Likely, OriginTypes.External),
+                    )
+                ],
+            ),
+            Medium(
+                "01_例大祭第一届插画3.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (ReliabilityTypes.Likely, OriginTypes.External),
+                    )
+                ],
+            ),
+            Medium(
+                "01_例大祭第一届插画4.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (ReliabilityTypes.Likely, OriginTypes.External),
+                    )
+                ],
+            ),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
         ]
         locations = [
             Location(
                 coordinates=(35.5587817, 139.7240667),
                 address="1-chōme-20-20 Minamikamata, Ota City, Tokyo 144-0035, Japan",
-                description="大田区産業プラザPiO",
+                description="大田区産果スラサPIO 大展示ホール",
                 sources=[
                     Source(
-                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD/%E7%AC%AC1%E5%B1%8A%E6%91%8A%E4%BD%8D",
-                        (ReliabilityTypes.Likely, OriginTypes.External),
+                        "Official event cover, see media.",
+                        (ReliabilityTypes.Likely, OriginTypes.Official),
                     )
                 ],
                 # comments=None,
@@ -117,8 +153,8 @@ if __name__ == "__main__":
             media=media_,
             sources=[
                 Source(
-                    "Date: https://reitaisai.com/",
-                    (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    "Date: Official event cover, see media.",
+                    (ReliabilityTypes.Likely, OriginTypes.Official),
                 ),
                 Source(
                     "Participating circles (1): https://jiyugiga.sakura.ne.jp/reitaisai_list.html",
@@ -129,7 +165,7 @@ if __name__ == "__main__":
                     (ReliabilityTypes.Reliable, OriginTypes.OfficialExt),
                 ),
                 Source(
-                    "Participating circles (2): https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD/%E7%AC%AC1%E5%B1%8A%E6%91%8A%E4%BD%8D (well sourced)",
+                    "Participating circles (3): https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD/%E7%AC%AC1%E5%B1%8A%E6%91%8A%E4%BD%8D (well sourced)",
                     (ReliabilityTypes.Reliable, OriginTypes.External),
                 ),
                 Source(
@@ -162,6 +198,42 @@ if __name__ == "__main__":
                     )
                 ],
             ),
+            Medium(
+                "02_例大祭第二届插画1.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (ReliabilityTypes.Likely, OriginTypes.External),
+                    )
+                ],
+            ),
+            Medium(
+                "02_例大祭第二届插画2.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (ReliabilityTypes.Likely, OriginTypes.External),
+                    )
+                ],
+            ),
+            Medium(
+                "02_例大祭第二届插画4.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (ReliabilityTypes.Likely, OriginTypes.External),
+                    )
+                ],
+            ),
+            Medium(
+                "02_例大祭第二届插画5.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (ReliabilityTypes.Likely, OriginTypes.External),
+                    )
+                ],
+            ),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
         ]
         locations = [
@@ -169,11 +241,11 @@ if __name__ == "__main__":
                 coordinates=(35.655153, 139.7607689),
                 address="Japan, 〒105-7501 Tokyo, Minato City, Kaigan, 1 Chome−7−1 東京ポートシティ竹芝オフィスタワ",
                 comments=None,
-                description="東京都立産業貿易センター浜松町館",
+                description="東京都立産業貿易センター浜松町館5F",
                 sources=[
                     Source(
-                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD/%E7%AC%AC2%E5%B1%8A%E6%91%8A%E4%BD%8D",
-                        (ReliabilityTypes.Likely, OriginTypes.External),
+                        "Official event cover, see media.",
+                        (ReliabilityTypes.Likely, OriginTypes.Official),
                     )
                 ],
                 imageUrl="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmihIGbPitN7h8Vc_sXo8I679FTgrlkYst2LWaAy_Wl45MDqMaFnozSO4Y2Vud8h07FgRpXdq_CPW3IWnFwj-AyKuJ0L7ShZyQ41TQcBAFNOouYZR3jFZXxn_SQsgsK-FST-5JK8g=w408-h544-k-no",
@@ -194,8 +266,8 @@ if __name__ == "__main__":
             media=media_,
             sources=[
                 Source(
-                    "Date: https://reitaisai.com/",
-                    (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    "Date: Official event cover, see media.",
+                    (ReliabilityTypes.Likely, OriginTypes.Official),
                 ),
                 Source(
                     "Participating circles (1): https://web.archive.org/web/20050828173158/http://www.reitaisai.com/clist.html",
@@ -231,17 +303,26 @@ if __name__ == "__main__":
                     )
                 ],
             ),
+            Medium(
+                "03_529px-例大祭第三届插画2.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (ReliabilityTypes.Likely, OriginTypes.External),
+                    )
+                ],
+            ),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
         ]
         locations = [
             Location(
                 coordinates=(35.7284509, 139.7180429),
                 address="Japan, 〒170-8630 Tokyo, Toshima City, Higashiikebukuro, 3 Chome−1−4 サンシャインシティ 青エリア",
-                description="サンシャインシティ",
+                description="池袋サンシャイン文化会館Dホール",
                 sources=[
                     Source(
-                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD/%E7%AC%AC2%E5%B1%8A%E6%91%8A%E4%BD%8D",
-                        (ReliabilityTypes.Likely, OriginTypes.External),
+                        "Official event cover, see media.",
+                        (ReliabilityTypes.Likely, OriginTypes.Official),
                     )
                 ],
                 # comments=None,
@@ -263,8 +344,8 @@ if __name__ == "__main__":
             media=media_,
             sources=[
                 Source(
-                    "Date: https://reitaisai.com/",
-                    (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    "Date: Official event cover, see media.",
+                    (ReliabilityTypes.Likely, OriginTypes.Official),
                 ),
                 Source(
                     "Participating circles (1): https://web.archive.org/web/20060423161331/http://www.reitaisai.com/clist.html",
@@ -291,7 +372,15 @@ if __name__ == "__main__":
         print(f"Processing {event_name} ...")
 
         media_ = [
-            # Medium("", [Source("", (RT.Reliable, OT.Official))]),
+            Medium(
+                "04_例大祭第四届插画.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (ReliabilityTypes.Likely, OriginTypes.External),
+                    )
+                ],
+            ),
             Medium(
                 "04_2007reitaisai_map.pdf",
                 [
@@ -307,11 +396,11 @@ if __name__ == "__main__":
             Location(
                 coordinates=(35.7284509, 139.7180429),
                 address="Japan, 〒170-8630 Tokyo, Toshima City, Higashiikebukuro, 3 Chome−1−4 サンシャインシティ 青エリア",
-                description="サンシャインシティ 展示ホールD",
+                description="池袋サンシャイン文化会館 Dホール",
                 sources=[
                     Source(
-                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD/%E7%AC%AC2%E5%B1%8A%E6%91%8A%E4%BD%8D",
-                        (ReliabilityTypes.Likely, OriginTypes.External),
+                        "Official event cover, see media.",
+                        (ReliabilityTypes.Likely, OriginTypes.Official),
                     )
                 ],
                 # comments=None,
@@ -333,8 +422,8 @@ if __name__ == "__main__":
             media=media_,
             sources=[
                 Source(
-                    "Date: https://reitaisai.com/",
-                    (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    "Date: Official event cover, see media.",
+                    (ReliabilityTypes.Likely, OriginTypes.Official),
                 ),
                 Source(
                     "Participating circles (1): https://web.archive.org/web/20070427051959/http://www5b.biglobe.ne.jp/~cck/r4_list.htm",
@@ -361,6 +450,15 @@ if __name__ == "__main__":
         print(f"Processing {event_name} ...")
 
         media_ = [
+            Medium(
+                "05_例大祭第五届插画.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (ReliabilityTypes.Likely, OriginTypes.External),
+                    )
+                ],
+            ),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
@@ -372,8 +470,8 @@ if __name__ == "__main__":
                 description="東京ビッグサイト 西4ホール",
                 sources=[
                     Source(
-                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD/%E7%AC%AC5%E5%B1%8A%E6%91%8A%E4%BD%8D",
-                        (ReliabilityTypes.Likely, OriginTypes.External),
+                        "Official event cover, see media.",
+                        (ReliabilityTypes.Likely, OriginTypes.Official),
                     )
                 ],
                 # comments=None,
@@ -395,8 +493,8 @@ if __name__ == "__main__":
             media=media_,
             sources=[
                 Source(
-                    "Date: https://reitaisai.com/",
-                    (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    "Date: Official event cover, see media.",
+                    (ReliabilityTypes.Likely, OriginTypes.Official),
                 ),
                 Source(
                     "Participating circles (1): https://web.archive.org/web/20251012230741/http://www5b.biglobe.ne.jp/~cck/list/rei5_list_tu.htm",
@@ -441,8 +539,8 @@ if __name__ == "__main__":
                 description="東京ビッグサイト東3・4・5・6ホール",
                 sources=[
                     Source(
-                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD/%E7%AC%AC6%E5%B1%8A%E6%91%8A%E4%BD%8D/%E3%81%82%EF%BD%9E%E3%81%91%E9%83%A8%E5%88%86",
-                        (ReliabilityTypes.Likely, OriginTypes.External),
+                        "Official event cover, see media.",
+                        (ReliabilityTypes.Likely, OriginTypes.Official),
                     )
                 ],
                 # comments=None,
@@ -464,8 +562,8 @@ if __name__ == "__main__":
             media=media_,
             sources=[
                 Source(
-                    "Date: https://reitaisai.com/",
-                    (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    "Date: Official event cover, see media.",
+                    (ReliabilityTypes.Likely, OriginTypes.Official),
                 ),
                 Source(
                     "Participating circles (1): http://www.green.dti.ne.jp/maisan/gensoukyou/reitaisai6_list.html",
@@ -492,7 +590,15 @@ if __name__ == "__main__":
         print(f"Processing {event_name} ...")
 
         media_ = [
-            # Medium("", [Source("", (RT.Reliable, OT.Official))]),
+            Medium(
+                "07_例大祭第七届插画.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
         ]
@@ -500,11 +606,11 @@ if __name__ == "__main__":
             Location(
                 coordinates=(35.6284445, 139.7926734),
                 address="3 Chome-11-1 Ariake, Koto City, Tokyo 135-0063, Japan",
-                description="東京ビッグサイト東2・3・4・5・6ホール",
+                description="東京ビッグサイト東3・4・5・6ホール",
                 sources=[
                     Source(
-                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD/%E7%AC%AC7%E5%B1%8A%E6%91%8A%E4%BD%8D/%E3%81%82%EF%BD%9E%E3%81%91%E9%83%A8%E5%88%86",
-                        (ReliabilityTypes.Likely, OriginTypes.External),
+                        "Official event cover, see media.",
+                        (ReliabilityTypes.Likely, OriginTypes.Official),
                     )
                 ],
                 # comments=None,
@@ -526,8 +632,8 @@ if __name__ == "__main__":
             media=media_,
             sources=[
                 Source(
-                    "Date: https://reitaisai.com/",
-                    (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    "Date: Official event cover, see media.",
+                    (ReliabilityTypes.Likely, OriginTypes.Official),
                 ),
                 Source(
                     "Participating circles (1): http://www.green.dti.ne.jp/maisan/gensoukyou/reitaisai7_list.html",
@@ -554,7 +660,24 @@ if __name__ == "__main__":
         print(f"Processing {event_name} ...")
 
         media_ = [
-            # Medium("", [Source("", (RT.Reliable, OT.Official))]),
+            Medium(
+                "08_例大祭第八届插画.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "08_例大祭第八届插画2.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
             Medium(
                 "08_2011_reitaisai8_map.pdf",
                 [
@@ -570,11 +693,11 @@ if __name__ == "__main__":
             Location(
                 coordinates=(35.6284445, 139.7926734),
                 address="3 Chome-11-1 Ariake, Koto City, Tokyo 135-0063, Japan",
-                description="東京ビッグサイト東1・2・3・4・5・6ホール",
+                description="東京ビッグサイト東2・3・4・5・6ホール",
                 sources=[
                     Source(
-                        "https://web.archive.org/web/20110928120540/http://www.reitaisai.com/circlelists/",
-                        (ReliabilityTypes.Reliable, OriginTypes.Official),
+                        "Official event cover, see media.",
+                        (ReliabilityTypes.Likely, OriginTypes.Official),
                     )
                 ],
                 # comments=None,
@@ -596,8 +719,8 @@ if __name__ == "__main__":
             media=media_,
             sources=[
                 Source(
-                    "Date: https://reitaisai.com/",
-                    (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    "Date: Official event cover, see media.",
+                    (ReliabilityTypes.Likely, OriginTypes.Official),
                 ),
                 Source(
                     "Participating circles (1): https://web.archive.org/web/20110928120540/http://www.reitaisai.com/circlelists/",
@@ -642,8 +765,8 @@ if __name__ == "__main__":
                 description="東京ビッグサイト東1・2・3・4・5・6ホール",
                 sources=[
                     Source(
-                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD/%E7%AC%AC9%E5%B1%8A%E6%91%8A%E4%BD%8D/A%EF%BD%9EM%E9%83%A8%E5%88%86",
-                        (ReliabilityTypes.Likely, OriginTypes.External),
+                        "Official event cover, see media.",
+                        (ReliabilityTypes.Likely, OriginTypes.Official),
                     )
                 ],
                 # comments=None,
@@ -665,8 +788,8 @@ if __name__ == "__main__":
             media=media_,
             sources=[
                 Source(
-                    "Date: https://reitaisai.com/",
-                    (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    "Date: Official event cover, see media.",
+                    (ReliabilityTypes.Likely, OriginTypes.Official),
                 ),
                 Source(
                     "Participating circles (1): http://g-mirror.gptwm.com/reitaisai/reitaisai9_poslist.pdf",
@@ -703,6 +826,33 @@ if __name__ == "__main__":
                 ],
             ),
             Medium(
+                "10_例大祭第十届插画2.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "10_例大祭第十届插画3.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "10_1113px-例大祭第十届插画4.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
                 "10_rts10_map_e123.png",
                 [
                     Source(
@@ -729,8 +879,8 @@ if __name__ == "__main__":
                 description="東京ビッグサイト東1・2・3・4・5・6ホール",
                 sources=[
                     Source(
-                        "https://web.archive.org/web/20130727035307/http://reitaisai.com/list_circle1#circlelist_top",
-                        (ReliabilityTypes.Reliable, OriginTypes.Official),
+                        "Official event cover, see media.",
+                        (ReliabilityTypes.Likely, OriginTypes.Official),
                     )
                 ],
                 # comments=None,
@@ -752,8 +902,8 @@ if __name__ == "__main__":
             media=media_,
             sources=[
                 Source(
-                    "Date: https://reitaisai.com/",
-                    (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    "Date: Official event cover, see media.",
+                    (ReliabilityTypes.Likely, OriginTypes.Official),
                 ),
                 Source(
                     "Participating circles (1): https://web.archive.org/web/20130727035307/http://reitaisai.com/list_circle1#circlelist_top",
@@ -798,7 +948,15 @@ if __name__ == "__main__":
                     )
                 ],
             ),
-            # Medium("", [Source("", (RT.Reliable, OT.Official))]),
+            Medium(
+                "11_例大祭第十一届插画1.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
         ]
         locations = [
@@ -808,8 +966,8 @@ if __name__ == "__main__":
                 description="東京ビッグサイト東1・2・3・4・5・6ホール",
                 sources=[
                     Source(
-                        "https://web.archive.org/web/20150316084312/https://reitaisai.com/rts11/rts11/block123",
-                        (ReliabilityTypes.Reliable, OriginTypes.Official),
+                        "Official event cover, see media.",
+                        (ReliabilityTypes.Likely, OriginTypes.Official),
                     )
                 ],
                 # comments=None,
@@ -831,7 +989,7 @@ if __name__ == "__main__":
             media=media_,
             sources=[
                 Source(
-                    "Date: https://reitaisai.com/",
+                    "Date: https://web.archive.org/web/20150316084312/https://reitaisai.com/rts11/rts11/block123",
                     (ReliabilityTypes.Reliable, OriginTypes.Official),
                 ),
                 Source(
@@ -881,6 +1039,15 @@ if __name__ == "__main__":
                     )
                 ],
             ),
+            Medium(
+                "12_539px-例大祭第十二届插画3.png",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
         ]
@@ -891,8 +1058,8 @@ if __name__ == "__main__":
                 description="東京ビッグサイト東1・2・3・4・5・6ホール",
                 sources=[
                     Source(
-                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD/%E7%AC%AC12%E5%B1%8A%E6%91%8A%E4%BD%8D/A%EF%BD%9EN%E9%83%A8%E5%88%86 (well sourced)",
-                        (ReliabilityTypes.Likely, OriginTypes.External),
+                        "https://web.archive.org/web/20150316084312/https://reitaisai.com/rts11/rts11/block123",
+                        (ReliabilityTypes.Reliable, OriginTypes.Official),
                     )
                 ],
                 # comments=None,
@@ -914,7 +1081,7 @@ if __name__ == "__main__":
             media=media_,
             sources=[
                 Source(
-                    "Date: https://reitaisai.com/",
+                    "Date: https://web.archive.org/web/20150316084312/https://reitaisai.com/rts11/rts11/block123",
                     (ReliabilityTypes.Reliable, OriginTypes.Official),
                 ),
                 Source(
@@ -951,6 +1118,15 @@ if __name__ == "__main__":
                     )
                 ],
             ),
+            Medium(
+                "13_536px-例大祭第十三届插画1.png",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
         ]
@@ -961,8 +1137,8 @@ if __name__ == "__main__":
                 description="東京ビッグサイト東1・2・3・4・5・6ホール",
                 sources=[
                     Source(
-                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD/%E7%AC%AC13%E5%B1%8A%E6%91%8A%E4%BD%8D/A%EF%BD%9E%E3%81%88%E9%83%A8%E5%88%86",
-                        (ReliabilityTypes.Likely, OriginTypes.External),
+                        "Official event cover, see media.",
+                        (ReliabilityTypes.Likely, OriginTypes.Official),
                     )
                 ],
                 # comments=None,
@@ -984,8 +1160,8 @@ if __name__ == "__main__":
             media=media_,
             sources=[
                 Source(
-                    "Date: https://reitaisai.com/",
-                    (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    "Date: Official event cover, see media.",
+                    (ReliabilityTypes.Likely, OriginTypes.Official),
                 ),
                 Source(
                     "Participating circles (1): https://web.archive.org/web/20250821211501/http://s.reitaisai.com/rts13/name-circle/",
@@ -1021,6 +1197,15 @@ if __name__ == "__main__":
                     )
                 ],
             ),
+            Medium(
+                "14_545px-例大祭第十四届插画2.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
         ]
@@ -1031,8 +1216,8 @@ if __name__ == "__main__":
                 description="東京ビッグサイト東1・2・3・4・5・6ホール",
                 sources=[
                     Source(
-                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD/%E7%AC%AC14%E5%B1%8A%E6%91%8A%E4%BD%8D/A%EF%BD%9ES%E9%83%A8%E5%88%86",
-                        (ReliabilityTypes.Likely, OriginTypes.External),
+                        "Date: Official event cover, see media.",
+                        (ReliabilityTypes.Likely, OriginTypes.Official),
                     )
                 ],
                 # comments=None,
@@ -1054,8 +1239,8 @@ if __name__ == "__main__":
             media=media_,
             sources=[
                 Source(
-                    "Date: https://reitaisai.com/",
-                    (ReliabilityTypes.Reliable, OriginTypes.Official),
+                    "Date: Official event cover, see media.",
+                    (ReliabilityTypes.Likely, OriginTypes.Official),
                 ),
                 Source(
                     "Participating circles (1): https://web.archive.org/web/20230801074707/http://s.reitaisai.com/rts14/block/",
@@ -1100,8 +1285,8 @@ if __name__ == "__main__":
                 description="東京ビッグサイト 東ホール",
                 sources=[
                     Source(
-                        "https://web.archive.org/web/20260512005313/https://reitaisai.com/rts15/?p=532",
-                        (ReliabilityTypes.Likely, OriginTypes.External),
+                        "Date: https://web.archive.org/web/20260512005313/https://reitaisai.com/rts15/?p=532",
+                        (ReliabilityTypes.Reliable, OriginTypes.Official),
                     )
                 ],
                 # comments=None,
@@ -1156,6 +1341,15 @@ if __name__ == "__main__":
                     )
                 ],
             ),
+            Medium(
+                "16_536px-例大祭第十六届插画1.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
         ]
@@ -1166,8 +1360,8 @@ if __name__ == "__main__":
                 description="東京ビッグサイト 西ホール",
                 sources=[
                     Source(
-                        main_page_with_history,
-                        (ReliabilityTypes.Likely, OriginTypes.External),
+                        "Official event cover, see media.",
+                        (ReliabilityTypes.Likely, OriginTypes.Official),
                     )
                 ],
                 # comments=None,
@@ -1188,7 +1382,7 @@ if __name__ == "__main__":
             circles=[],
             media=media_,
             sources=[
-                Source("Date: main_page_with_history", (RT.Reliable, OT.Official)),
+                Source(f"Date: {main_page_with_history}", (RT.Reliable, OT.Official)),
                 Source(
                     "Participating circles: https://web.archive.org/web/20260130135218/http://s.reitaisai.com/rts16/",
                     (ReliabilityTypes.Reliable, OriginTypes.Official),
@@ -1310,6 +1504,15 @@ if __name__ == "__main__":
                     )
                 ],
             ),
+            Medium(
+                "18_530px-例大祭第十八届插画1.png",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
         ]
@@ -1396,7 +1599,42 @@ if __name__ == "__main__":
                     )
                 ],
             ),
-            # Medium("19_Circle_bosyu.gif", [Source("https://web.archive.org/web/20220325072223/https://reitaisai.com/rts19/accepted-circle-list/", (RT.Reliable, OT.Official))]),
+            Medium(
+                "19_Circle_bosyu.gif",
+                [
+                    Source(
+                        "https://web.archive.org/web/20220325072223/https://reitaisai.com/rts19/accepted-circle-list/",
+                        (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "19_530px-例大祭第十九届插画1.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "19_776px-例大祭第十九届插画2.png",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "19_536px-例大祭第十九届插画3.png",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
         ]
         locations = [
@@ -1468,6 +1706,24 @@ if __name__ == "__main__":
                     Source(
                         "https://web.archive.org/web/20260512005327/https://reitaisai.com/rts20/",
                         (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "20_536px-例大祭第二十届插画1.png",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "20_1090px-例大祭第二十届插画2.png",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
                     )
                 ],
             ),
@@ -1554,7 +1810,24 @@ if __name__ == "__main__":
                     )
                 ],
             ),
-            # Medium("", [Source("", (RT.Reliable, OT.Official))]),
+            Medium(
+                "21_536px-例大祭第二十一届插画1.jpg",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "21_926px-例大祭第二十一届插画2.png",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
         ]
         locations = [
@@ -1656,8 +1929,24 @@ if __name__ == "__main__":
                     )
                 ],
             ),
-            # Medium("", [Source("https://web.archive.org/web/20260512005321/https://reitaisai.com/rts22/before-circle-docs/", (RT.Reliable, OT.Official))]),
-            # Medium("", [Source("https://web.archive.org/web/20260512005321/https://reitaisai.com/rts22/before-circle-docs/", (RT.Reliable, OT.Official))]),
+            Medium(
+                "22_531px-例大祭第二十二届插画1.png",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "22_924px-例大祭第二十二届插画2.png",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
             # Medium("", [Source("", (RT.Reliable, OT.Official))]),
         ]
         locations = [
@@ -1728,6 +2017,24 @@ if __name__ == "__main__":
                     Source(
                         "https://web.archive.org/web/20260812171832/https://reitaisai.com/rts23/",
                         (RT.Reliable, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "23_530px-例大祭第二十三届插画1.png",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
+                    )
+                ],
+            ),
+            Medium(
+                "23_929px-例大祭第二十三届插画2.png",
+                [
+                    Source(
+                        "https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD",
+                        (RT.Likely, OT.Official),
                     )
                 ],
             ),
@@ -1859,11 +2166,9 @@ if __name__ == "__main__":
         ],
         comments="Many sources from https://thwiki.cc/%E5%8D%9A%E4%B8%BD%E7%A5%9E%E7%A4%BE%E4%BE%8B%E5%A4%A7%E7%A5%AD#15. As on thwiki.cc, several circle count discrepancies exist compared to official sources (not sourced here but can be seen on thwiki.cc).",
         description=None,
-        last_edited="2026.09.02",
+        last_edited="2026.09.08",
     )
 
-    raise ValueError("Fix Date sources")
-    raise ValueError("Location source, avoid External")
     print(f"Saving {Path(__file__).stem} database...")
     event_group.save(PATH_EVENT_GROUP, indent=None)
     print("Done")
