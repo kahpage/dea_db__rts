@@ -2142,8 +2142,8 @@ if __name__ == "__main__":
 
     # ==== event group ====
     media = [
-        # Medium("",
-        #        [Source("", (RT.Reliable, OT.Official))]),
+        Medium("eg_hakurei.JPG",
+               [Source("https://web.archive.org/web/20110812090240/http://www.reitaisai.jp/", (RT.Reliable, OT.Official))]),
         # Medium("",
         #        [Source("", (RT.Reliable, OT.Official))]),
     ]
