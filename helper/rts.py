@@ -1449,7 +1449,7 @@ if __name__ == "__main__":
                 f"RTS{i}",
                 "第十七回 博麗神社例大祭",
             ],
-            dates="2020.03.22 -> 2020.05.17 -> CANCELLED",
+            dates="2020.03.22 → 2020.05.17 → CANCELLED",
             circles=[],
             media=media_,
             sources=[
